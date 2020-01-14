@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.vscode
+.env
+dist
+*.bin
+*.sqlite
+node_modules
+run.sh
+*.log

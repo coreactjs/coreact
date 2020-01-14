@@ -1,0 +1,61 @@
+.home-card
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	max-width: 220px
+	padding: 16px
+	text-align: justify
+	margin: 0 16px
+	img
+		width: 96px
+		height: 96px
+		object-fit: contain
+		margin: 16px
+
+	.content
+		position: relative
+		display: flex
+		flex-direction: column
+		max-height: 140px
+		overflow: hidden
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 70px
+			background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#fff, 1) 70%)
+		h3
+			white-space: nowrap
+			text-overflow: ellipsis
+			text-align: center
+			color: #444b54
+			margin-top: 16px
+		p
+			color: #6c757d
+			font-size: 14px
+
+		.more
+			display: flex
+			align-items: center
+			position: absolute
+			justify-content: flex-end
+			bottom: 0
+			color: $primary
+			z-index: 2
+			padding: 0 8px
+			height: 40px
+			width: 100%
+	&.active
+		.content
+			height: auto
+			overflow: initial
+			margin-bottom: 24px
+			max-height: none
+			padding: 0 0 10px 0
+			&:after
+				display: none
+			.more
+				bottom: -24px

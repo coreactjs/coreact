@@ -1,0 +1,88 @@
+.main-nav-container
+	position: sticky
+	top: 0
+	display: flex
+	align-items: center
+	box-shadow: 0 1px 2px 0 rgba(#000, 0.1)
+	background: #fff
+	height: 56px
+	padding: 0 16px
+	z-index: 1000
+	.brand
+		display: flex
+		justify-content: center
+		align-items: center
+		user-select: none
+		color: $text-color
+		img
+			width: 24px
+			height: 24px
+		strong
+			margin-left: 6px
+			font-weight: bold
+			text-transform: uppercase
+	.menu
+		display: flex
+		margin-left: auto
+		height: 100%
+		align-items: center
+		.trigger
+			order: -1
+			display: none
+			width: 32px
+			height: 32px
+			cursor: pointer
+			&:hover
+				background: $very-light-gray
+		.item
+			text-transform: uppercase
+			display: flex
+			align-items: center
+			color: $text-color
+			font-weight: normal
+			padding: 0 12px
+			white-space: nowrap
+			height: 100%
+			img
+				width: 16px
+				height: 16px
+				margin-left: 8px
+			&:hover
+				color: $primary
+				background: $very-light-gray
+			&.active
+				color: $primary
+				font-weight: bold
+
+	+media-breakpoint-down('sm')
+		.brand
+			z-index: 2
+		.menu
+			.trigger
+				display: flex
+			.item
+				display: none
+
+		&.active
+			.menu
+
+				height: auto
+				position: fixed
+				top: 0
+				right: 0
+				width: 100vw
+				flex-direction: column
+				align-items: flex-end
+				background: #fff
+				box-shadow: 0 5px 10px 0 rgba(#000, 0.1)
+				padding: 12px 0
+				.trigger
+					margin-right: 16px
+					margin-bottom: 12px
+				.item
+					padding: 8px
+					display: flex
+					justify-content: center
+					width: 100%
+					&:hover
+						background: $very-light-gray
