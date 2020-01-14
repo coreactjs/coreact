@@ -7,7 +7,7 @@ const transparentIcon = require('./transparency.svg');
 const databaseIcon = require('./database.svg');
 const analysisIcon = require('./analysis.svg');
 const reactIcon = require('./react.svg');
-
+const logo = require('../components/logo.png');
 export class HomeScreen extends PureComponent {
 	public render() {
 		return (
@@ -45,7 +45,13 @@ export class HomeScreen extends PureComponent {
 					</div>
 				</section>
 				<footer className="home-screen--footer">
-
+					<div className="container">
+						<img src={logo}/>
+						<strong>
+							Copyright (c) COREACT by Aryan Alikhani
+							<a className="github-button" href="https://github.com/xeuus" data-show-count="true" aria-label="Follow @xeuus on GitHub">Follow @xeuus</a>
+						</strong>
+					</div>
 				</footer>
 			</>
 		);

@@ -26,8 +26,22 @@
 		margin-left: auto
 		height: 100%
 		align-items: center
+		.github-link
+			display: flex
+			align-items: center
+			color: $text-color
+			text-transform: uppercase
+			font-weight: normal
+			padding: 0 12px
+			white-space: nowrap
+			height: 100%
+			margin: 0 8px
+			& > span
+				display: flex
+				align-items: center
+				margin: 0
 		.trigger
-			order: -1
+			order: 9999
 			display: none
 			width: 32px
 			height: 32px
@@ -43,6 +57,7 @@
 			padding: 0 12px
 			white-space: nowrap
 			height: 100%
+			margin: 0 8px
 			img
 				width: 16px
 				height: 16px
@@ -65,7 +80,6 @@
 
 		&.active
 			.menu
-
 				height: auto
 				position: fixed
 				top: 0
@@ -77,12 +91,18 @@
 				box-shadow: 0 5px 10px 0 rgba(#000, 0.1)
 				padding: 12px 0
 				.trigger
+					order: -1
 					margin-right: 16px
 					margin-bottom: 12px
+				.github-link
+					justify-content: center
+					width: 100%
+					height: 40px
 				.item
 					padding: 8px
 					display: flex
 					justify-content: center
 					width: 100%
+					height: 40px
 					&:hover
 						background: $very-light-gray

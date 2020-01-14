@@ -10,7 +10,7 @@ const instance = new Webpack({
   },
   enableGzip: false,
   path: path.resolve(__dirname, './bundle'),
-  publicPath: 'bundle/default/',
+  publicPath: process.env.NODE_ENV === 'production' ? 'bundle/default/' : '/dist/',
   sassOptions: {
     includePaths: [path.resolve(__dirname, './styles')],
     data:'@import "variables";'

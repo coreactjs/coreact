@@ -24,15 +24,14 @@ export class Nav extends PureComponent {
 				<div className="menu">
 					<i className="icon trigger" onClick={this.toggleMenu}>menu</i>
 					<NavLink className="item" to={Routes.gettingStarted} onClick={this.hideMenu} exact={true}>
-						<span>Getting Started</span>
+						<div>Getting Started</div>
 					</NavLink>
 					<NavLink className="item" to={Routes.reference} onClick={this.hideMenu} exact={true}>
-						<span>API</span>
+						<div>API</div>
 					</NavLink>
-					<a className="item" href={Routes.github}>
-						<span>Github</span>
-						<img src={githubIcon}/>
-					</a>
+					<div className="github-link">
+						<a className="github-button" href="https://github.com/xeuus/coreact" data-color-scheme="no-preference: light; light: dark; dark: dark;" data-show-count="true" aria-label="Star xeuus/coreact on GitHub">GITHUB</a>
+					</div>
 				</div>
 			</nav>
 		);
